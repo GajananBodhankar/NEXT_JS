@@ -1,5 +1,7 @@
 import React from "react";
-// 
+// We can not use this approach in react because
+// in react we can not import/export ASYNC function having
+// JSX in it
 
 async function getApicall() {
   let result = await fetch("https://jsonplaceholder.typicode.com/todos/");
