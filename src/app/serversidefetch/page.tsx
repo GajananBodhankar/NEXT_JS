@@ -10,9 +10,23 @@ async function ServerSideFetch() {
   let data = await getApicall();
   return (
     <div>
-      {data.map((i) => (
-        <p>{i.title}</p>
-      ))}
+      {data.map(
+        (i: {
+          title:
+            | string
+            | number
+            | bigint
+            | boolean
+            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+            | Iterable<React.ReactNode>
+            | React.ReactPortal
+            | Promise<React.AwaitedReactNode>
+            | null
+            | undefined;
+        }) => (
+          <p>{i.title}</p>
+        )
+      )}
     </div>
   );
 }
