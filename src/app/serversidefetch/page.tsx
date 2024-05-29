@@ -12,6 +12,7 @@ async function getApicall() {
 async function ServerSideFetch() {
   let data = await getApicall();
   return (
+    
     <div>
       {data.map(
         (i: {
