@@ -11,6 +11,7 @@ export default function Home() {
     } catch (e) {
       console.log(e);
     }
+    console.log((document.cookie = "Name=Gajanan;secure"));
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
