@@ -1,4 +1,5 @@
 import React from "react";
+// 
 
 async function getApicall() {
   let result = await fetch("https://jsonplaceholder.typicode.com/todos/");
