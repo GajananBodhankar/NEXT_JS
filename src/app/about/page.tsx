@@ -10,6 +10,12 @@ function About() {
       <h1>I am About page</h1>
       <Link href={"/"}>Back</Link>
       <button onClick={() => router.back()}>Back</button>
+
+      <br />
+      <br />
+      <button onClick={() => router.push("/about/student")}>
+        Students page
+      </button>
     </div>
   );
 }

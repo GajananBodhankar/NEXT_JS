@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 import { useEffect } from "react";
 
 export default function Home() {
@@ -13,9 +15,13 @@ export default function Home() {
     }
     console.log((document.cookie = "Name=Gajanan;secure"));
   }
+  const router = useRouter();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <button onClick={() => name()}>click</button>
+      <br />
+      <br />
+      <button onClick={() => router.push("/about")}>About page</button>
     </main>
   );
 }
